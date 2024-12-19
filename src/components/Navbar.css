@@ -1,0 +1,120 @@
+/* General navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #fff;
+  transition: 0.5s;
+}
+
+.navbar.dark {
+  background: #000;
+  color: #fff;
+}
+
+.logo {
+  height: 40px;
+  transition: all 0.3s ease;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  margin: 0 15px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+ul li:hover {
+  color: #ff6600; /* Or any color of your choice */
+}
+
+/* Search bar styles */
+.search {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-right: 0px;
+}
+
+.search input {
+  padding: 5px 10px;
+  border-radius: 20px;
+  width: 200px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.search img {
+  position: absolute;
+  right: 10px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* Toggle button styles */
+.toggle {
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Media Query for responsive navbar */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  ul {
+      flex-direction: column;
+      margin-top: 10px;
+  }
+
+  ul li {
+      margin: 10px 0;
+  }
+
+  .search input {
+      width: 100%;
+      margin-top: 10px;
+  }
+
+  .toggle {
+      display: block;
+      transform: rotate(0deg);
+  }
+}
+
+
+
+.dark .search input::placeholder {
+  color: #222;
+}
+
+.dark .search {
+  background: #fff;
+}
+
+.dark .search input{
+  background: #222;
+}
+.dark .toggle {
+  filter: invert(1); /* Inverts the toggle icon color for better contrast in dark mode */
+}
+
+/* Logo adjustments in dark mode */
+.dark .logo {
+  filter: invert(1); /* Inverts the logo color for better contrast in dark mode */
+}
+
+.dark .navbar{
+  background: #000;
+  color: #fff;
+}
